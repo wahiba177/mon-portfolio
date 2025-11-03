@@ -255,38 +255,59 @@
       </section>
   
 
-      <!-- CONTACT -->
-      <section class="container bg-white py-5" id="contact">
-        <div class="row px-3">
-          <div class="col-12">
-            <h2 class="title position-relative pb-2 mb-4">Contactez-moi</h2>
-          </div>
-          <div class="col-12">
-            <div class="contact-form">
-              <form name="sentMessage" id="contactForm" novalidate>
-                <div class="form-row">
-                  <div class="control-group col-sm-6">
-                    <input type="text" class="form-control p-4" id="name" placeholder="Votre nom" required>
-                  </div>
-                  <div class="control-group col-sm-6">
-                    <input type="email" class="form-control p-4" id="email" placeholder="Votre email" required>
-                  </div>
+      <!-- 
+            ================================================================
+            MODIFICATION À FAIRE CI-DESSOUS :
+            Remplacez "VOTRE_URL_PERSONNELLE_FORMSPREE" par le lien que vous
+            avez copié depuis le site de Formspree.
+            ================================================================
+        -->
+        <form id="contactForm" action="https://formspree.io/f/manlgjrr" method="POST">
+            <div class="row g-3">
+                <!-- Champ : Nom -->
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control border-0 bg-secondary" id="name" name="name" placeholder="Votre Nom" required>
+                        <label for="name">Votre Nom</label>
+                    </div>
                 </div>
-                <div class="control-group">
-                  <input type="text" class="form-control p-4" id="subject" placeholder="Sujet" required>
-                </div>
-                <div class="control-group">
-                  <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message" required></textarea>
-                </div>
-                <button class="btn btn-primary py-3 px-4" type="submit">Envoyer</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
 
+                <!-- Champ : Email -->
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="email" class="form-control border-0 bg-secondary" id="email" name="email" placeholder="Votre Email" required>
+                        <label for="email">Votre Email</label>
+                    </div>
+                </div>
+
+                <!-- Champ : Sujet -->
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="text" class="form-control border-0 bg-secondary" id="subject" name="subject" placeholder="Sujet" required>
+                        <label for="subject">Sujet</label>
+                    </div>
+                </div>
+
+                <!-- Champ : Message -->
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea class="form-control border-0 bg-secondary" placeholder="Laissez votre message ici" id="message" name="message" style="height: 200px" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+
+                <!-- Bouton d'envoi -->
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">Envoyer le message</button>
+                </div>
+            </div>
+        </form>
+        <!-- Fin du formulaire -->
+    </div>
+</section>
     </div>
   </div>
 </body>
 
 </html>
+
